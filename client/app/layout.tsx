@@ -13,7 +13,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
 	title: 'Telegram web',
-	description: 'Telegram web application clone created by Sammi.ac',
+	description: 'Telegram web application clone created by Sirojbek.uz',
 	icons: { icon: '/logo.svg' },
 };
 
