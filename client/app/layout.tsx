@@ -3,7 +3,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Space_Grotesk } from 'next/font/google';
 
-import { Toaster } from '@/components/ui/toaster';
+import { ThemeProvider } from '@/components/providers/theme.provider';
 
 const spaceGrotesk = Space_Grotesk({
 	weight: ['400', '500', '600', '700', '300'],
@@ -28,8 +28,14 @@ export default function RootLayout({
 				className={`${spaceGrotesk.variable} antialiased sidebar-custom-scrollbar`}
 				suppressHydrationWarning
 			>
-				<main>{children}</main>
-				<Toaster />
+				<ThemeProvider
+					attribute='class'
+					defaultTheme='system'
+					enableSystem
+					disableTransitionOnChange
+				>
+					{children}
+				</ThemeProvider>
 			</body>
 		</html>
 	);
